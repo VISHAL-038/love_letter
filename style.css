@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff9f1;
+    font-family: 'Georgia', serif;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .letter-wrapper {
+    width: 320px;
+    height: 240px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .tap-text {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1em;
+    color: #5a381e;
+    background: rgba(255, 248, 230, 0.85);
+    padding: 8px 16px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    z-index: 3;
+    transition: opacity 0.5s ease;
+  }
+  
+  .envelope-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #c49e65;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    z-index: 2;
+    transition: transform 1s ease;
+    transform-origin: top center;
+  }
+  
+  .envelope-body {
+    width: 100%;
+    height: 100%;
+    background: #c49e65;
+    position: relative;
+    z-index: 1;
+    border: 2px solid #8b5e3c;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  .letter {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: url('parchment.jpg') no-repeat center center / cover;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    overflow-y: auto;
+    z-index: 3;
+  }
+  
+  .letter.show {
+    opacity: 1;
+  }
+  
+  .content {
+    font-size: 1.1em;
+    color: #4b2e0e;
+    white-space: pre-line;
+  }
+  
+  #heartsCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  

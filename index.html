@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Letter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <!-- The main wrapper that holds the letter -->
+  <div class="letter-wrapper" id="letterWrapper">
+    <!-- "Tap to open" text -->
+    <div class="tap-text" id="tapText">Tap to open this letter 💌</div>
+    
+    <!-- Envelope top and bottom -->
+    <div class="envelope-top"></div>
+    <div class="envelope-body">
+      <div class="letter" id="letter">
+        <div class="content" id="messageContent"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Background music -->
+<audio id="bg-music" src="music.mp3" preload="auto"></audio>
+
+<!-- Canvas for floating hearts -->
+<canvas id="heartsCanvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
